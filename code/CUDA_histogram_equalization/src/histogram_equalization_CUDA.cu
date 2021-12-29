@@ -75,8 +75,8 @@ int main(){
 	string folder_path = "//content/Parallel-Histogram-Equalization/code/CUDA_histogram_equalization/src/images/";
 	string image_path = "car.jpg";
 
-	Mat image = imread(folder_path + image_path);		//load the image
-	Size size (12000, 12000);
+	//Mat image = imread(folder_path + image_path);		
+	//Size size (12000, 12000);
 
 	resize(image, image, size);
 
