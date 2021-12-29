@@ -1,12 +1,3 @@
-/*
- ============================================================================
- Name        : histogram_equalization_CUDA.cu
- Author      : francesco
- Version     :
- Copyright   : Your copyright notice
- Description : CUDA compute reciprocals
- ============================================================================
- */
 
 #include <iostream>
 #include <stdlib.h>
@@ -82,7 +73,7 @@ __global__ void YUV2RGB(unsigned char *image, int *cumulative_dist,int *histogra
 
 int main(){
 	string folder_path = "//content/Parallel-Histogram-Equalization/code/CUDA_histogram_equalization/src/images/";
-	string image_path = "tree.jpg";
+	string image_path = "car.jpg";
 
 	Mat image = imread(folder_path + image_path);		//load the image
 	Size size (12000, 12000);
@@ -159,7 +150,7 @@ int main(){
 	Mat final_image = Mat(Size(width,height), CV_8UC3, host_image);
 
 	string save_folder_path = "/content/Parallel-Histogram-Equalization/code/CUDA_histogram_equalization/src/saved/";
-	string save_image_path = "desk.jpg";
+	string save_image_path = "C2.jpg";
   
 	imwrite(save_folder_path + save_image_path, final_image);						//save equalized RGB image
 
